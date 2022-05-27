@@ -135,3 +135,18 @@ final class NMBRFormatterCurrencyRightHandSideTests: XCTestCase {
         XCTAssertEqual("100 mil M€", formatter.formatCurrency(100_000_000_000, currencyCode: "EUR"))
     }
 }
+
+final class NMBRFormatterPerformanceTests: XCTestCase {
+
+    func testPerformance() {
+        let formatter = NMBRFormatter()
+        formatter.currencyCode = "EUR"
+        formatter.locale = Locale(identifier: "es_ES")
+
+        measure {
+            for amount in 1..<10000 {
+                _ = formatter.format(Double(amount))
+            }
+        }
+    }
+}
