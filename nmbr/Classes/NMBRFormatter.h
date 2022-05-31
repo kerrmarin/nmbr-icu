@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, NMBRFormatterNotation) {
     NMBRFormatterNotationShort,
     NMBRFormatterNotationLong
-};
+} NS_SWIFT_NAME(NMBRFormatter.Notation);
 
 typedef NS_ENUM(NSInteger, NMBRFormatterGroupingStrategy) {
     NMBRFormatterGroupingStrategyOff,
@@ -20,24 +20,25 @@ typedef NS_ENUM(NSInteger, NMBRFormatterGroupingStrategy) {
     NMBRFormatterGroupingStrategyAuto,
     NMBRFormatterGroupingStrategyOnAligned,
     NMBRFormatterGroupingStrategyThousands
-};
+} NS_SWIFT_NAME(NMBRFormatter.GroupingStrategy);
 
 @interface NMBRFormatter : NSObject
 
-- (nullable NSString *)formatNumber:(double)number;
-- (nullable NSString *)formatCurrency:(double)number currencyCode:(NSString *)currencyCode;
+- (nullable NSString *)stringFrom:(double)number __attribute__((__swift_name__("string(from:)")));
+//NS_SWIFT_NAME(string(from:currencyCode:))
+- (nullable NSString *)stringFrom:(double)number currencyCode:(NSString *)currencyCode __attribute__((__swift_name__("string(from:currencyCode:)")));
 
 - (instancetype)initWithLocale:(NSString *)locale;
 
 - (instancetype)initWithLocale:(NSString *)locale
-                  maxPrecision:(int)precision;
+                  maxPrecision:(UInt8)precision;
 
 - (instancetype)initWithLocale:(NSString *)locale
-                  maxPrecision:(int)precision
+                  maxPrecision:(UInt8)precision
                       notation:(NMBRFormatterNotation)notation;
 
 - (instancetype)initWithLocale:(NSString *)locale
-                  maxPrecision:(int)precision
+                  maxPrecision:(UInt8)precision
                       notation:(NMBRFormatterNotation)notation
               groupingStrategy:(NMBRFormatterGroupingStrategy)groupingStrategy;
 

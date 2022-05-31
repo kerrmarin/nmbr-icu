@@ -29,13 +29,13 @@
                    maxPrecision:2];
 }
 
-- (nonnull instancetype)initWithLocale:(NSString *)locale maxPrecision:(int)precision {
+- (nonnull instancetype)initWithLocale:(NSString *)locale maxPrecision:(UInt8)precision {
     return [self initWithLocale:locale
                    maxPrecision:precision
                        notation:NMBRFormatterNotationShort];
 }
 
-- (nonnull instancetype)initWithLocale:(NSString *)locale maxPrecision:(int)precision notation:(NMBRFormatterNotation)notation {
+- (nonnull instancetype)initWithLocale:(NSString *)locale maxPrecision:(UInt8)precision notation:(NMBRFormatterNotation)notation {
     return [self initWithLocale:locale
                    maxPrecision:precision
                        notation:notation
@@ -43,7 +43,7 @@
 }
 
 - (nonnull instancetype)initWithLocale:(NSString *)locale
-                          maxPrecision:(int)precision
+                          maxPrecision:(UInt8)precision
                               notation:(NMBRFormatterNotation)notation
                       groupingStrategy:(NMBRFormatterGroupingStrategy)groupingStrategy {
     if (self = [super init]) {
@@ -58,7 +58,7 @@
     return self;
 }
 
-- (nullable NSString *)formatNumber:(double)number {
+- (nullable NSString *)stringFrom:(double)number {
     UErrorCode status = U_ZERO_ERROR;
     UErrorCode stringStatus = U_ZERO_ERROR;
     std::string str;
@@ -74,7 +74,7 @@
     return [NSString stringWithUTF8String:str.c_str()];
 }
 
-- (nullable NSString *)formatCurrency:(double)number currencyCode:(NSString *)currencyCode {
+- (nullable NSString *)stringFrom:(double)number currencyCode:(NSString *)currencyCode {
     UErrorCode status = U_ZERO_ERROR;
     UErrorCode stringStatus = U_ZERO_ERROR;
     std::string str;
