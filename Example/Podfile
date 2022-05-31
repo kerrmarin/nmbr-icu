@@ -1,13 +1,14 @@
 use_frameworks!
 
-platform :ios, '12.0'
+platform :ios, '14.0'
 
 target 'nmbr_Example' do
-  pod 'nmbr', :path => '../'
+  pod 'nmbr-icu', :path => '../'
+  pod 'icu4c-iosx', '71.1.2'
 
   pod 'SwiftLint'
 
   target 'nmbr_Tests' do
-    inherit! :search_paths
+    inherit! :complete
   end
 end

@@ -1,0 +1,6 @@
+framework module nmbr_icu {
+  umbrella header "nmbr-icu-umbrella.h"
+
+  export *
+  module * { export * }
+}

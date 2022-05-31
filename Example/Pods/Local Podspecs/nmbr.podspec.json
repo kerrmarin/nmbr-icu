@@ -20,13 +20,23 @@
     "4.2",
     "5.0"
   ],
+  "static_framework": true,
   "platforms": {
-    "ios": "9.0"
+    "ios": "14.0"
   },
   "source_files": "nmbr/Classes/**/*",
   "resource_bundles": {
     "nmbr": [
       "nmbr/Assets/**/*.stringsdict"
+    ]
+  },
+  "libraries": "c++",
+  "public_header_files": [
+    "nmbr/Classes/NMBRFormatter.h"
+  ],
+  "dependencies": {
+    "icu4c-iosx": [
+
     ]
   },
   "swift_version": "5.0"

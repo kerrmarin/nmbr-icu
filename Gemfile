@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 
-ruby "2.6.3"
+ruby "3.0.1"
 
-gem "cocoapods", ">= 1.7.3"
+gem "cocoapods", ">= 1.11.0"
