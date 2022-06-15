@@ -25,5 +25,5 @@ jobs:
     - name: Build and test
       run: |
         bundle
-        xcodebuild test -workspace "Example/nmbr.xcworkspace" -scheme "nmbr-Example" -destination "platform=iOS Simulator,OS=15.5,name=iPhone 13"
+        xcodebuild test -workspace "Example/nmbr.xcworkspace" -scheme "nmbr-Example" -destination "platform=iOS Simulator,name=iPhone 13"
         bundle exec pod lib lint --allow-warnings
