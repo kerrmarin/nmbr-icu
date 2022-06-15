@@ -55,6 +55,7 @@
 		8FD1B0E725B4C17C00758052 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		8FDA7EC5285A422800CAEADF /* FUNDING.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = FUNDING.yml; sourceTree = "<group>"; };
 		8FDA7EC7285A422800CAEADF /* swift.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swift.yml; sourceTree = "<group>"; };
+		8FDA7EC8285A4FF900CAEADF /* lint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = lint.yml; sourceTree = "<group>"; };
 		9DFDC8DF1BDB6ED90FAC55B1 /* Pods_nmbr_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nmbr_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06E2F812594CEC5002F53E5 /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
 		A0D88DDC2E58B83EE978BC36 /* Pods-nmbr_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nmbr_Example.release.xcconfig"; path = "Target Support Files/Pods-nmbr_Example/Pods-nmbr_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				8FDA7EC7285A422800CAEADF /* swift.yml */,
+				8FDA7EC8285A4FF900CAEADF /* lint.yml */,
 			);
 			path = workflows;
 			sourceTree = "<group>";
