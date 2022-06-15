@@ -4,7 +4,6 @@ platform :ios, '14.0'
 
 target 'nmbr_Example' do
   pod 'nmbr-icu', :path => '../'
-  pod 'icu4c-iosx', '71.1.2'
 
   pod 'SwiftLint'
 

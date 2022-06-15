@@ -1,11 +1,10 @@
 PODS:
-  - icu4c-iosx (71.1.2)
-  - nmbr-icu (0.1.0):
-    - icu4c-iosx
+  - icu4c-iosx (71.1.3)
+  - nmbr-icu (0.2.0):
+    - icu4c-iosx (= 71.1.3)
   - SwiftLint (0.47.1)
 
 DEPENDENCIES:
-  - icu4c-iosx (= 71.1.2)
   - nmbr-icu (from `../`)
   - SwiftLint
 
@@ -19,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  icu4c-iosx: b99a1fd53237f0df6f45070bf9603b6ff2593dd3
-  nmbr-icu: a4e01724861c1bb9159ff113256520da4ada6bb5
+  icu4c-iosx: c1c8e99191646db1963dfe211e35fa2d50ef80e2
+  nmbr-icu: 7b529927594f320fa734c0137e694292ebcfcf4d
   SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
 
-PODFILE CHECKSUM: f70feb924230be2fc470c63e5475054f1cfe8f65
+PODFILE CHECKSUM: fabf24e570c406a2dd2a13ffab10a3794b4b7c54
 
 COCOAPODS: 1.11.3

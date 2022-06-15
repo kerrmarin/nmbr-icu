@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/kerrmarin/nmbr-icu'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'kerr marin miller' => 'kerr@kerrmarin.com' }
   s.source           = { :git => 'https://github.com/kerrmarin/nmbr-icu.git', :tag => "v"+s.version.to_s }
@@ -34,6 +33,6 @@ Pod::Spec.new do |s|
 
   s.public_header_files = [ "nmbr/Classes/NMBRFormatter.h" ]
 
-  s.dependency 'icu4c-iosx'
+  s.dependency 'icu4c-iosx', '71.1.3'
 
 end

@@ -25,7 +25,6 @@ typedef NS_ENUM(NSInteger, NMBRFormatterGroupingStrategy) {
 @interface NMBRFormatter : NSObject
 
 - (nullable NSString *)stringFrom:(double)number __attribute__((__swift_name__("string(from:)")));
-//NS_SWIFT_NAME(string(from:currencyCode:))
 - (nullable NSString *)stringFrom:(double)number currencyCode:(NSString *)currencyCode __attribute__((__swift_name__("string(from:currencyCode:)")));
 
 - (instancetype)initWithLocale:(NSString *)locale;
