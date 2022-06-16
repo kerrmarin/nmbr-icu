@@ -32,6 +32,6 @@ Pod::Spec.new do |s|
 
   s.public_header_files = [ "nmbr/Classes/NMBRFormatter.h" ]
 
-  s.dependency 'icu4c-iosx', '71.1.4'
+  s.dependency 'icu4c-numberformatter', '0.1.0'
 
 end

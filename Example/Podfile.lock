@@ -1,27 +1,23 @@
 PODS:
-  - icu4c-iosx (71.1.4)
+  - icu4c-numberformatter (0.1.0)
   - nmbr-icu (0.2.0):
-    - icu4c-iosx (= 71.1.4)
-  - SwiftLint (0.47.1)
+    - icu4c-numberformatter (= 0.1.0)
 
 DEPENDENCIES:
   - nmbr-icu (from `../`)
-  - SwiftLint
 
 SPEC REPOS:
   trunk:
-    - icu4c-iosx
-    - SwiftLint
+    - icu4c-numberformatter
 
 EXTERNAL SOURCES:
   nmbr-icu:
     :path: "../"
 
 SPEC CHECKSUMS:
-  icu4c-iosx: f7817a6d3e1db04f0e9a8cb910fe358bc46f1533
-  nmbr-icu: d51b48db24d80e0fa325c31410cf4c1396cb2dbb
-  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
+  icu4c-numberformatter: 223ba9af7585dc0c736b4e49c3832b77fe122ae9
+  nmbr-icu: 5783551908d716a9cb9368a7b5d50c38fb43a164
 
-PODFILE CHECKSUM: fabf24e570c406a2dd2a13ffab10a3794b4b7c54
+PODFILE CHECKSUM: 1b913b08f372203602a6bc84b74551e44a4c4f23
 
 COCOAPODS: 1.11.3

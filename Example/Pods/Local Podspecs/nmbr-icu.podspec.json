@@ -25,8 +25,8 @@
     "nmbr/Classes/NMBRFormatter.h"
   ],
   "dependencies": {
-    "icu4c-iosx": [
-      "71.1.4"
+    "icu4c-numberformatter": [
+      "0.1.0"
     ]
   }
 }
