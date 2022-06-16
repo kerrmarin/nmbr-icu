@@ -23,7 +23,6 @@ Pod::Spec.new do |s|
   s.author           = { 'kerr marin miller' => 'kerr@kerrmarin.com' }
   s.source           = { :git => 'https://github.com/kerrmarin/nmbr-icu.git', :tag => "v"+s.version.to_s }
 
-  s.swift_versions = [ '4.0', '4.2', '5.0' ]
   s.static_framework = true
   s.ios.deployment_target = '14.0'
 
@@ -33,6 +32,6 @@ Pod::Spec.new do |s|
 
   s.public_header_files = [ "nmbr/Classes/NMBRFormatter.h" ]
 
-  s.dependency 'icu4c-iosx', '71.1.3'
+  s.dependency 'icu4c-iosx', '71.1.4'
 
 end
