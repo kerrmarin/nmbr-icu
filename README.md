@@ -17,10 +17,6 @@ It should
 
 Long term, this should just be handled in `Foundation` - there shouldn't really be a need for this pod.
 
-## Example
-
-To run the example project, clone the repo and look in `Example/`.
-
 ## Installation
 
 nmbr is available through [CocoaPods](https://cocoapods.org). To install
@@ -46,4 +42,4 @@ myLabel.text = formatter.string(from: 123.456) // "£123.46"
 
 ## License
 
-nmbr is available under the MIT license. See the LICENSE file for more info.
+nmbr-icu is available under the MIT license. See the LICENSE file for more info.
