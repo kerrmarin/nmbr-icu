@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'nmbr-icu'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'A number formatter specifically for rounding large numbers'
 
   s.description      = <<-DESC
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/kerrmarin/nmbr-icu'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'kerr marin miller' => 'kerr@kerrmarin.com' }
-  s.source           = { :git => 'https://github.com/kerrmarin/nmbr-icu.git', :tag => "v"+s.version.to_s }
+  s.source           = { :git => 'https://github.com/kerrmarin/nmbr-icu.git', :tag => s.version.to_s }
 
   s.static_framework = true
   s.ios.deployment_target = '14.0'
@@ -29,6 +29,7 @@ Pod::Spec.new do |s|
   s.source_files = 'nmbr/Classes/**/*'
 
   s.library = 'c++'
+  s.module_name = "nmbr"
 
   s.public_header_files = [ "nmbr/Classes/NMBRFormatter.h" ]
 
