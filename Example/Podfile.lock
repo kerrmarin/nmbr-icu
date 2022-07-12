@@ -1,22 +1,15 @@
 PODS:
-  - icu4c-numberformatter (0.1.0)
-  - nmbr-icu (0.2.0):
-    - icu4c-numberformatter (= 0.1.0)
+  - nmbr-icu (0.3.0)
 
 DEPENDENCIES:
   - nmbr-icu (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - icu4c-numberformatter
 
 EXTERNAL SOURCES:
   nmbr-icu:
     :path: "../"
 
 SPEC CHECKSUMS:
-  icu4c-numberformatter: 223ba9af7585dc0c736b4e49c3832b77fe122ae9
-  nmbr-icu: 5783551908d716a9cb9368a7b5d50c38fb43a164
+  nmbr-icu: a685567c6d0a5621c23c7a92abacd6971480b670
 
 PODFILE CHECKSUM: 1b913b08f372203602a6bc84b74551e44a4c4f23
 

@@ -1,6 +1,6 @@
 {
   "name": "nmbr-icu",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "summary": "A number formatter specifically for rounding large numbers",
   "description": "A locale-aware number formatter to deal with shorter versions of large numbers.\ni.e. 1,000,000 would be either \"1M\" or \"1 million\" in en_GB.\n\nDeals with other locales grouping of digits (i.e. Japan groups by 4, and India groups by 3 then 2)",
   "homepage": "https://github.com/kerrmarin/nmbr-icu",
@@ -13,9 +13,8 @@
   },
   "source": {
     "git": "https://github.com/kerrmarin/nmbr-icu.git",
-    "tag": "v0.2.0"
+    "tag": "0.3.0"
   },
-  "static_framework": true,
   "platforms": {
     "ios": "14.0"
   },
@@ -24,9 +23,9 @@
   "public_header_files": [
     "nmbr/Classes/NMBRFormatter.h"
   ],
-  "dependencies": {
-    "icu4c-numberformatter": [
-      "0.1.0"
-    ]
-  }
+  "vendored_frameworks": "ICU.xcframework",
+  "compiler_flags": [
+    "-Wno-documentation-deprecated-sync",
+    "-Wno-documentation"
+  ]
 }
