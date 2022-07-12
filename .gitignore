@@ -42,11 +42,3 @@ Carthage/Build
 # intermediate files.
 
 *.noindex
-
-*.xcframework
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
