@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'nmbr-icu'
-  s.version          = '0.3.1'
+  s.version          = '0.3.2'
   s.summary          = 'A number formatter specifically for rounding large numbers'
 
   s.description      = <<-DESC
@@ -28,7 +28,5 @@ Pod::Spec.new do |s|
   s.library = 'c++'
   s.public_header_files = [ "nmbr/Classes/NMBRFormatter.h" ]
   s.vendored_frameworks = 'ICU.xcframework'
-
-  s.compiler_flags = '-Wno-documentation-deprecated-sync', '-Wno-documentation' # Disable warnings from ICU
 
 end
