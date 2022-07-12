@@ -1,0 +1,22 @@
+{
+    "featureFilters": {        
+        "brkitr_rules": "exclude",
+        "brkitr_dictionaries": "exclude",
+        "brkitr_tree": "exclude",
+        "conversion_mappings": "exclude",
+        "coll_ucadata": "exclude",
+        "coll_tree": "exclude",
+        "confusables": "exclude",
+        "lang_tree": "exclude",
+        "normalization": "exclude",
+        "region_tree": "exclude",
+        "stringprep": "exclude",
+        "zone_tree": "exclude",
+        "zone_supplemental": "exclude",
+        "translit": "exclude",
+        "unames": "exclude",
+        "ulayout": "exclude",
+        "unit_tree": "exclude",
+        "cnvalias": "exclude"
+      }
+  }

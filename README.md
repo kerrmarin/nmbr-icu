@@ -31,7 +31,7 @@ pod 'nmbr-icu'
 Create a NMBRFormatter
 
 ```swift
-let formatter = NMBRFormatter(locale: "en_GB", maxPrecision: 0, notation: .short)
+let formatter = NMBRFormatter(locale: Locale(identifier: "en_GB"), maxPrecision: 0, notation: .short, currencyCode: "GBP")
 ```
 
 Use the formatter
@@ -39,6 +39,16 @@ Use the formatter
 ```swift
 myLabel.text = formatter.string(from: 123.456) // "£123.46"
 ```
+
+# Updating the version of ICU
+To update the ICU version, open the Makefile and update the `ICU_tag` flag. It should be set to a value that is a released version of ICU. Then run:
+
+- `make deepclean`
+- `gmake` 
+
+If you do not have `gmake` installed, install it with homebrew.
+
+The file `filters.json` contains a list of excluded features that helps make the data built by ICU smaller.
 
 ## License
 
