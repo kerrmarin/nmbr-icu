@@ -13,7 +13,7 @@
 #include <unicode/unum.h>
 
 @interface NMBRFormatter () {
-    icu_71::number::LocalizedNumberFormatter formatter;
+    icu::number::LocalizedNumberFormatter formatter;
 }
 
 @end
@@ -50,12 +50,11 @@
                               notation:(NMBRFormatterNotation)notation
                       groupingStrategy:(NMBRFormatterGroupingStrategy)groupingStrategy {
     if (self = [super init]) {
-        icu_71::number::Notation notat = notationFromNMBRFormatterNotation(notation);
+        icu::number::Notation notat = notationFromNMBRFormatterNotation(notation);
         UNumberGroupingStrategy strategy = uNumberStrategyFromNMBRFormatterGroupingStrategy(groupingStrategy);
-        formatter = icu::number::NumberFormatter::with()
+        formatter = icu::number::NumberFormatter::withLocale(locale.localeIdentifier.UTF8String)
             .notation(notat)
             .grouping(strategy)
-            .locale(locale.localeIdentifier.UTF8String)
             .precision(icu::number::Precision::maxFraction(precision));
     }
     return self;
@@ -100,19 +99,18 @@
                   currencyCode:(NSString *)currencyCode {
     if (self = [super init]) {
         UErrorCode status = U_ZERO_ERROR;
-        icu_71::CurrencyUnit currencyUnit = icu_71::CurrencyUnit(currencyCode.UTF8String, status);
+        icu::CurrencyUnit currencyUnit = icu::CurrencyUnit(currencyCode.UTF8String, status);
         if (U_FAILURE(status)) {
             return [self initWithLocale:locale
                            maxPrecision:precision
                                notation:notation
                        groupingStrategy:groupingStrategy];
         } else {
-            icu_71::number::Notation notat = notationFromNMBRFormatterNotation(notation);
+            icu::number::Notation notat = notationFromNMBRFormatterNotation(notation);
             UNumberGroupingStrategy strategy = uNumberStrategyFromNMBRFormatterGroupingStrategy(groupingStrategy);
-            formatter = icu::number::NumberFormatter::with()
+            formatter = icu::number::NumberFormatter::withLocale(locale.localeIdentifier.UTF8String)
                 .notation(notat)
                 .grouping(strategy)
-                .locale(locale.localeIdentifier.UTF8String)
                 .precision(icu::number::Precision::maxFraction(precision))
                 .unit(currencyUnit);
         }
@@ -136,12 +134,12 @@
     return [NSString stringWithUTF8String:str.c_str()];
 }
 
-icu_71::number::Notation notationFromNMBRFormatterNotation(NMBRFormatterNotation notation) {
+icu::number::Notation notationFromNMBRFormatterNotation(NMBRFormatterNotation notation) {
     switch (notation) {
         case NMBRFormatterNotationShort:
-            return icu_71::number::Notation::compactShort();
+            return icu::number::Notation::compactShort();
         case NMBRFormatterNotationLong:
-            return icu_71::number::Notation::compactLong();
+            return icu::number::Notation::compactLong();
     }
 }
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'nmbr-icu'
-  s.version          = '0.3.2'
+  s.version          = '0.3.3'
   s.summary          = 'A number formatter specifically for rounding large numbers'
 
   s.description      = <<-DESC
