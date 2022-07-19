@@ -252,7 +252,7 @@ $(BUILD_dir)/ios_arm64:
 	$(eval ARCH := arm64)
 	mkdir -p $@ && cd $@ ; \
 	export OTHER_CONFIG="$(CONFIG_ios_flags)" ; \
-	export CFLAGS="-isysroot $(SDK_dev) -I$(SDK_dev)/usr/include/ -I./include/ -arch $(ARCH) $(IOS_cflags) $(ICU_cflags) $(OPT_cflags)" ; \
+	export CFLAGS="-isysroot $(SDK_dev) -I$(SDK_dev)/usr/include/ -I./include/ -arch $(ARCH) $(IOS_cflags) $(ICU_cflags) $(OPT_cflags) -fembed-bitcode" ; \
 	export CXXFLAGS="-stdlib=libc++ -std=c++11 $${CFLAGS}" ; \
 	export LDFLAGS="-stdlib=libc++ -L$(SDK_dev)/usr/lib/ -isysroot $(SDK_dev) -Wl,-dead_strip $(IOS_cflags) -lstdc++" ; \
 	ICU_DATA_FILTER_FILE=$(MASTER_root)/filters.json \
@@ -262,7 +262,7 @@ $(BUILD_dir)/ios_arm64:
 simulator: $(DIR)
 	cd $(DIR) ;\
 	export OTHER_CONFIG="$(CONFIG_ios_flags)" ; \
-	export CFLAGS="$(ARCH_cflags) -target $(TGT)-apple-ios$(IOS_min_version)-simulator -isysroot $(SDK_sim) -I$(SDK_sim)/usr/include/ -I./include/ $(ARCH_cflags) $(ICU_cflags) $(OPT_cflags)" ;\
+	export CFLAGS="$(ARCH_cflags) -target $(TGT)-apple-ios$(IOS_min_version)-simulator -isysroot $(SDK_sim) -I$(SDK_sim)/usr/include/ -I./include/ $(ARCH_cflags) $(ICU_cflags) $(OPT_cflags) -fembed-bitcode-marker" ;\
 	export CXXFLAGS="-stdlib=libc++ -std=c++11 $${CFLAGS}" ;\
 	export LDFLAGS="-stdlib=libc++ -L$(SDK_sim)/usr/lib/ -isysroot $(SDK_sim) -Wl,-dead_strip $(IOS_cflags) -lstdc++" ;\
 	ICU_DATA_FILTER_FILE=$(MASTER_root)/filters.json \
