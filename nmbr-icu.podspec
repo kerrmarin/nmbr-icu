@@ -24,9 +24,9 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/kerrmarin/nmbr-icu.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '14.0'
-  s.source_files = 'nmbr/Classes/**/*'
+  s.source_files = 'Sources/**/*'
   s.library = 'c++'
-  s.public_header_files = [ "nmbr/Classes/NMBRFormatter.h" ]
+  s.public_header_files = [ "Sources/nmbr-icu/include/NMBRFormatter.h" ]
   s.vendored_frameworks = 'ICU.xcframework'
 
 end

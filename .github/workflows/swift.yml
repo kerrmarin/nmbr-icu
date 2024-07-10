@@ -12,15 +12,15 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Setup environment
-      uses: ruby/setup-ruby@v1.110.0
+      uses: ruby/setup-ruby@v1.182.0
       with:
         ruby-version: '3.0.1'
         bundler-cache: true
     - name: Setup Xcode
-      uses: maxim-lobanov/setup-xcode@v1.4.1
+      uses: maxim-lobanov/setup-xcode@v1.6.0
       with:
         xcode-version: latest-stable
     - name: Build and test
       run: |
         bundle
-        xcodebuild test -workspace "Example/nmbr.xcworkspace" -scheme "nmbr-Example" -destination "platform=iOS Simulator,name=iPhone 13"
+        xcodebuild test -workspace ".swiftpm/xcode/package.xcworkspace" -scheme "nmbr-icu" -destination "platform=iOS Simulator,name=iPhone 15"
