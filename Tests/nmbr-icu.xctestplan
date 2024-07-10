@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "E29D6EED-F8EC-4C39-A1E7-05A06C76B430",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "nmbrTests",
+        "name" : "nmbrTests"
+      }
+    }
+  ],
+  "version" : 1
+}

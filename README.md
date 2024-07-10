@@ -19,12 +19,8 @@ Long term, this should just be handled in `Foundation` - there shouldn't really 
 
 ## Installation
 
-nmbr is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+nmbr is available through SPM. To install it, simply add the package to your dependencies.
 
-```ruby
-pod 'nmbr-icu'
-```
 
 ## Usage
 
