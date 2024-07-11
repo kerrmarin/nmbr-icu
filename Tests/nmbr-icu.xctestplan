@@ -14,8 +14,8 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:",
-        "identifier" : "nmbrTests",
+        "containerPath" : "container:nmbr.xcodeproj",
+        "identifier" : "8F2608A62C3DDEE4001391F7",
         "name" : "nmbrTests"
       }
     }
