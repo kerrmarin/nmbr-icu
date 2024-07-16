@@ -23,4 +23,4 @@ jobs:
     - name: Build and test
       run: |
         bundle
-        xcodebuild test -project "nmbr-icu.xcprojct" -scheme "nmbr-icu" -destination "platform=iOS Simulator,name=iPhone 15"
+        xcodebuild test -project "nmbr-icu.xcproject" -scheme "nmbr-icu" -destination "platform=iOS Simulator,name=iPhone 15"
