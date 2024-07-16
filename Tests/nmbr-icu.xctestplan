@@ -14,9 +14,9 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:nmbr.xcodeproj",
-        "identifier" : "8F2608A62C3DDEE4001391F7",
-        "name" : "nmbrTests"
+        "containerPath" : "container:nmbr-icu.xcodeproj",
+        "identifier" : "8F980DCA2C4666C5009F255A",
+        "name" : "nmbr-icuTests"
       }
     }
   ],

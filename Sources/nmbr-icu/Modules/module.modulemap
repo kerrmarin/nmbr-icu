@@ -1,0 +1,6 @@
+
+framework module nmbr_icu {
+    header "NMBRFormatter.h"
+
+    export *
+}
